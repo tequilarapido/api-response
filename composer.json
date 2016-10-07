@@ -1,0 +1,45 @@
+{
+    "name": "tequilarapido/api-response",
+    "description": "Simple fractal wrapper and helper for quick well formatted api response in a laravel application",
+    "homepage": "https://github.com/tequilarapido/api-response",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nassif Bourguig",
+            "email": "nbourguig@gmail.com",
+            "homepage": "https://github.com/nbourguig",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/http": "^5.3",
+        "illuminate/pagination": "^5.3",
+        "illuminate/support": "5.3.*",
+        "league/fractal": "^0.14.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "4.*",
+        "orchestra/testbench": "^3.2"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Tequilarapido\\ApiResponse\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tequilarapido\\ApiResponse\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
