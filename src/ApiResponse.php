@@ -43,9 +43,9 @@ class ApiResponse
      * Returns one item.
      *
      * @param mixed $data
-     * @param null  $transformer
-     * @param null  $resourceKey
-     * @param bool  $build
+     * @param null $transformer
+     * @param null $resourceKey
+     * @param bool $build
      *
      * @return array|\Illuminate\Http\Response|ResponseBuilder*
      */
@@ -94,7 +94,7 @@ class ApiResponse
      * Return a 404 not found error.
      *
      * @param string|array $message
-     * @param bool         $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response
      */
@@ -107,7 +107,7 @@ class ApiResponse
      * Return a 400 bad request error.
      *
      * @param string|array $message
-     * @param bool         $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response
      */
@@ -120,7 +120,7 @@ class ApiResponse
      * Return a 401 unauthorized error.
      *
      * @param string|array $message
-     * @param bool         $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response
      */
@@ -130,10 +130,23 @@ class ApiResponse
     }
 
     /**
+     * Return a 401 unauthorized error.
+     *
+     * @param string|array $message
+     * @param bool $build
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function errorForbidden($message = 'Forbidden', $build = true)
+    {
+        return $this->error($message, 403, null, $build);
+    }
+
+    /**
      * Return a 500 internal server error.
      *
      * @param string|array $message
-     * @param bool         $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response
      */
@@ -146,13 +159,13 @@ class ApiResponse
      * Return an error response.
      *
      * @param                  $messages
-     * @param int              $statusCode
+     * @param int $statusCode
      * @param mixed|MessageBag $errors
-     * @param bool             $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response
      */
-    public function error($messages, $statusCode, $errors = null, $build = true)
+    public function error($messages, $statusCode = 500, $errors = null, $build = true)
     {
         $error = [
             'error' => true,

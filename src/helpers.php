@@ -10,8 +10,6 @@ if (!function_exists('api_response')) {
      */
     function api_response()
     {
-        if (function_exists('app')) {
-            return app(ApiResponse::class);
-        }
+        return app(ApiResponse::class);
     }
 }
