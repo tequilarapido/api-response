@@ -1,12 +1,18 @@
 
 # tequilarapido/api-response 
 
+A simple way to return well formatted json responses in a Laravel application.
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tequilarapido/api-response.svg?style=flat-square)](https://packagist.org/packages/tequilarapido/api-response)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/tequilarapido/api-response/master.svg?style=flat-square)](https://travis-ci.org/tequilarapido/api-response)
 [![StyleCI](https://styleci.io/repos/70261592/shield)](https://styleci.io/repos/70261592)
 [![Quality Score](https://img.shields.io/scrutinizer/g/tequilarapido/api-response.svg?style=flat-square)](https://scrutinizer-ci.com/g/tequilarapido/api-response)
 [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/tequilarapido/api-response/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/tequilarapido/api-response/?branch=master)
+
+<p align="center">
+    <img src="https://s9.postimg.org/fcsm1oe8v/illustration.jpg" alt="Laravel Translation Sheet">
+</p>
 
 ## Installation
 

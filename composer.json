@@ -1,6 +1,6 @@
 {
     "name": "tequilarapido/api-response",
-    "description": "Simple fractal wrapper and helper for quick well formatted api response in a laravel application",
+    "description": "A simple way to return well formatted json responses in a Laravel application.",
     "homepage": "https://github.com/tequilarapido/api-response",
     "license": "MIT",
     "authors": [
