@@ -1,6 +1,4 @@
 
-# tequilarapido/api-response 
-
 A simple way to return well formatted json responses in a Laravel application.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tequilarapido/api-response.svg?style=flat-square)](https://packagist.org/packages/tequilarapido/api-response)
