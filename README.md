@@ -154,14 +154,6 @@ Result:
 
 ###  Other useful methods 
 
-
-| Country      | ?                     |
-|--------------|-----------------------|
-| State/City   | ?                     |
-| Common Name  | Domaine de production |
-| Locality     | ?                     |
-| Organization | ?                     |
-
 | Method      | Usage        | 
 |-------------|--------------|
 | `api_response()->noContent()` | Return an empty response with 204 No Content header.|
