@@ -29,7 +29,7 @@ class ApiResponse
      * @param null  $resourceKey
      * @param bool  $build
      *
-     * @return array|\Illuminate\Http\Response|ResponseBuilder*
+     * @return array|\Illuminate\Http\Response|ResponseBuilder
      */
     public function item($data, $transformer = null, $resourceKey = null, $build = true)
     {
@@ -188,7 +188,7 @@ class ApiResponse
      * before sending back response using `build()` method.
      *
      * @param $data
-     * @param $build
+     * @param boolean $build
      *
      * @return \Illuminate\Http\Response|ResponseBuilder
      */
