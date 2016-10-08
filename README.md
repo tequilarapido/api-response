@@ -152,19 +152,6 @@ Result:
 }
 ``` 
 
-###  Other useful methods 
-
-| Method      | Usage        | 
-|-------------|--------------|
-| `api_response()->noContent()` | Return an empty response with 204 No Content header.|
-| `api_response()->errorNotFound()` | Return a 404 Not found.|
-| `api_response()->errorBadRequest()` | Return a 404 Bad Request.|
-| `api_response()->errorForbidden()` | Return a 403 Forbidden.|
-| `api_response()->errorUnAUthorized()` | Return a 401 Unauthorized.|
-| `api_response()->errorInternal()` | Return a 500 Internal Error.|
-| `api_response()->error()` | Return a more customizable error (Accept MessageBag instance, staus code ...)|
-
-
 ### Attaching cookies
 
 For `item()`, `collection()`, and `paginatedCollection` methods the returned result is a built `Illuminate\Http\Response` object.
@@ -192,6 +179,19 @@ return api_response()
     ->withHeader('X-CUSTOM', 'customvalue')
     ->build();
 ```
+
+###  Other useful methods 
+
+| Method      | Usage        | 
+|-------------|--------------|
+| `api_response()->noContent()` | Return an empty response with 204 No Content header.|
+| `api_response()->errorNotFound()` | Return a 404 Not found.|
+| `api_response()->errorBadRequest()` | Return a 404 Bad Request.|
+| `api_response()->errorForbidden()` | Return a 403 Forbidden.|
+| `api_response()->errorUnAUthorized()` | Return a 401 Unauthorized.|
+| `api_response()->errorInternal()` | Return a 500 Internal Error.|
+| `api_response()->error()` | Return a more customizable error (Accept MessageBag instance, staus code ...)|
+
 
 ## Changelog
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
