@@ -57,6 +57,17 @@ class ApiResponseTest extends TestCase
     }
 
     /** @test */
+    public function it_returns_unauthorized_error_response()
+    {
+        $response = api_response()->errorUnauthorized();
+
+        $this->assertInstanceOf(Response::class, $response);
+        $this->assertEquals($response->getStatusCode(), Response::HTTP_UNAUTHORIZED);
+        $this->assertEquals($response->getContent(), '{"error":true,"code":401,"message":"Unauthorized"}');
+    }
+
+
+    /** @test */
     public function it_returns_internal_error_response()
     {
         $response = api_response()->errorInternal();
