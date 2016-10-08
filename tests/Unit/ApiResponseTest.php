@@ -84,7 +84,7 @@ class ApiResponseTest extends TestCase
         $this->assertEquals($response->getStatusCode(), Response::HTTP_OK);
         $this->assertEquals($response->getContent(), '{"data":[[1],[2],[3]]}');
 
-        $response = api_response()->collection(new Collection(["one" => 1, "two" => 2]));
+        $response = api_response()->collection(new Collection(['one' => 1, 'two' => 2]));
         $this->assertEquals($response->getContent(), '{"data":[[1],[2]]}');
     }
 
@@ -96,12 +96,12 @@ class ApiResponseTest extends TestCase
         $this->assertEquals($response->getStatusCode(), Response::HTTP_OK);
         $this->assertEquals($response->getContent(), '{"data":[1,2,3]}');
 
-        $response = api_response()->item(["one" => 1, "two" => 2]);
+        $response = api_response()->item(['one' => 1, 'two' => 2]);
         $this->assertInstanceOf(Response::class, $response);
         $this->assertEquals($response->getStatusCode(), Response::HTTP_OK);
         $this->assertEquals($response->getContent(), '{"data":{"one":1,"two":2}}');
 
-        $response = api_response()->item((object)["one" => 1, "two" => 2]);
+        $response = api_response()->item((object) ['one' => 1, 'two' => 2]);
         $this->assertInstanceOf(Response::class, $response);
         $this->assertEquals($response->getStatusCode(), Response::HTTP_OK);
         $this->assertEquals($response->getContent(), '{"data":{"one":1,"two":2}}');
@@ -117,6 +117,5 @@ class ApiResponseTest extends TestCase
         $this->assertInstanceOf(Response::class, $response);
         $this->assertEquals($response->getStatusCode(), Response::HTTP_OK);
         $this->assertEquals($response->getContent(), '{"data":[[1],[2],[3]],"meta":{"pagination":{"total":20,"count":3,"per_page":3,"current_page":1,"total_pages":7,"links":{"next":"\/?page=2"}}}}');
-
     }
 }
