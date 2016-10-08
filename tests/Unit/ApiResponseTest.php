@@ -34,6 +34,10 @@ class ApiResponseTest extends TestCase
         $response = api_response()->error(['one', 'two', 'three']);
         $this->assertEquals($response->getContent(), '{"error":true,"code":500,"message":["one","two","three"]}');
         $this->assertEmpty(array_diff($response->getOriginalContent()['message'], ['one', 'two', 'three']));
+
+        // Additional errors
+        $response = api_response()->error(['one', 'two', 'three'], 500, ['four', 'five']);
+        $this->assertEquals($response->getContent(), '{"error":true,"code":500,"message":["one","two","three"],"errors":["four","five"]}');
     }
 
     /** @test */
