@@ -6,7 +6,7 @@ use Illuminate\Http\Response as HttpResponse;
 use Symfony\Component\HttpFoundation\Cookie;
 
 /**
- * Inspired from dingo/api
+ * Inspired from dingo/api.
  *
  * Class ResponseBuilder
  */

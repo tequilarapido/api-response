@@ -32,7 +32,7 @@ class FractalAdapter
     }
 
     /**
-     * Return an item
+     * Return an item.
      *
      * @param $data
      * @param null $transformer
@@ -47,7 +47,7 @@ class FractalAdapter
     }
 
     /**
-     * Return a collection of items
+     * Return a collection of items.
      *
      * @param $data
      * @param null $transformer

@@ -65,12 +65,12 @@ class ApiResponseTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_bad_request_response(){
+    public function it_returns_bad_request_response()
+    {
         $response = api_response()->errorBadRequest();
 
         $this->assertInstanceOf(Response::class, $response);
         $this->assertEquals($response->getStatusCode(), Response::HTTP_BAD_REQUEST);
         $this->assertEquals($response->getContent(), '{"error":true,"code":400,"message":"Bad Request"}');
-
     }
 }

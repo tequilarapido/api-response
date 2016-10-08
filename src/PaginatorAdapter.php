@@ -8,7 +8,6 @@ use League\Fractal\Pagination\PaginatorInterface;
 
 class PaginatorAdapter implements PaginatorInterface
 {
-
     /**
      * @var LengthAwarePaginator
      */
@@ -25,7 +24,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getCurrentPage()
     {
@@ -33,7 +32,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getLastPage()
     {
@@ -41,7 +40,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getTotal()
     {
@@ -49,7 +48,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getCount()
     {
@@ -57,7 +56,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPerPage()
     {
@@ -65,7 +64,7 @@ class PaginatorAdapter implements PaginatorInterface
     }
 
     /**
-     * @param integer $page
+     * @param int $page
      *
      * @return string
      */
