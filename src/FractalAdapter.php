@@ -41,7 +41,7 @@ class FractalAdapter
      */
     public function item($data, $transformer = null, $resourceKey = null)
     {
-        $resource = new Item($data, $transformer, $resourceKey);
+        $resource = new Item($data, $this->getTransformer($transformer), $resourceKey);
 
         return $this->manager->createData($resource)->toArray();
     }
@@ -56,7 +56,7 @@ class FractalAdapter
      */
     public function collection($data, $transformer = null, $resourceKey = null)
     {
-        $resource = new Collection($data, $transformer, $resourceKey);
+        $resource = new Collection($data, $this->getTransformer($transformer), $resourceKey);
 
         return $this->manager->createData($resource)->toArray();
     }
@@ -71,10 +71,28 @@ class FractalAdapter
     {
         $paginator->appends($this->request->query());
 
-        $resource = new Collection($paginator->items(), $transformer, $resourceKey);
+        $resource = new Collection($paginator->items(), $this->getTransformer($transformer), $resourceKey);
 
         $resource->setPaginator(new PaginatorAdapter($paginator));
 
         return $this->manager->createData($resource)->toArray();
+    }
+
+    /**
+     * Return transformer.
+     *
+     * @param $transformer
+     * @return \Closure
+     */
+    protected function getTransformer($transformer)
+    {
+        return $transformer ?: function ($data) {
+
+            if ($data instanceof Arrayable) {
+                return $data->toArray();
+            }
+
+            return (array)$data;
+        };
     }
 }
