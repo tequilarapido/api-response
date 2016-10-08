@@ -88,12 +88,11 @@ class FractalAdapter
     protected function getTransformer($transformer)
     {
         return $transformer ?: function ($data) {
-
             if ($data instanceof Arrayable) {
                 return $data->toArray();
             }
 
-            return (array)$data;
+            return (array) $data;
         };
     }
 }

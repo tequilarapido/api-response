@@ -173,7 +173,7 @@ class ApiResponse
             'message' => $messages,
         ];
 
-        if (!is_null($errors)) {
+        if (! is_null($errors)) {
             $error = array_merge($error, ['errors' => $errors]);
         }
 
