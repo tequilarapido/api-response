@@ -10,7 +10,7 @@ class PaginatorAdpaterTest extends TestCase
     /** @test */
     public function it_returns_current_page()
     {
-        $this->assertEquals($this->adapter()->getCurrentPage(), 1);
+        $this->assertEquals($this->adapter()->getCurrentPage(), 3);
     }
 
     /** @test */
