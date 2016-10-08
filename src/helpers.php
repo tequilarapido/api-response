@@ -2,7 +2,7 @@
 
 use Tequilarapido\ApiResponse\ApiResponse;
 
-if (!function_exists('api_response')) {
+if (! function_exists('api_response')) {
     /**
      *  Return api response instance.
      *
