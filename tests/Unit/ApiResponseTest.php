@@ -70,7 +70,6 @@ class ApiResponseTest extends TestCase
         $this->assertEquals($response->getContent(), '{"error":true,"code":401,"message":"Unauthorized"}');
     }
 
-
     /** @test */
     public function it_returns_internal_error_response()
     {

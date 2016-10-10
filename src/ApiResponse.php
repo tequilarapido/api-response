@@ -188,7 +188,7 @@ class ApiResponse
      * before sending back response using `build()` method.
      *
      * @param $data
-     * @param boolean $build
+     * @param bool $build
      *
      * @return \Illuminate\Http\Response|ResponseBuilder
      */
