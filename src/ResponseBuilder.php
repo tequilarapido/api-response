@@ -138,6 +138,9 @@ class ResponseBuilder
     public function build()
     {
         $response = new HttpResponse($this->response, $this->statusCode, $this->headers);
+        
+        // Force json content type
+        $response->header('Content-Type', 'application/json');
 
         foreach ($this->cookies as $cookie) {
             if ($cookie instanceof Cookie) {
