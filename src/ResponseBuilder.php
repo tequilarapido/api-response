@@ -180,4 +180,22 @@ class ResponseBuilder
     {
         return $this->statusCode;
     }
+    
+    /**
+     * Add meta to response
+     *
+     * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function setMeta($key, $value)
+    {
+        if (!isset($this->response['meta'])) {
+            $this->response['meta'] = [];
+        }
+
+        $this->response['meta'][$key] = $value;
+        
+        return $this;
+    }
 }
