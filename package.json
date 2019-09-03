@@ -1,6 +1,6 @@
 {
   "name": "tequilarapido-api-reponse",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "release-patch-dryrun": "standard-version --release-as patch --no-verify --dry-run",
