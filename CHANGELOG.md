@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/tequilarapido/api-response/compare/v1.1.2...v1.1.3) (2019-09-04)
+
+
+### Bug Fixes
+
+* remove hard coded version in composer.json ([3cc49b5](https://github.com/tequilarapido/api-response/commit/3cc49b5))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/tequilarapido/api-response/compare/v1.1.1...v1.1.2) (2019-09-04)
 
